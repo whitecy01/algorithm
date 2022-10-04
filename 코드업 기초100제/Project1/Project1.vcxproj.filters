@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="소스 파일\기초 출력%281%29">
+      <UniqueIdentifier>{4395af38-021d-47ad-bd5f-235a6bf57286}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\기초-입출력%282%29">
+      <UniqueIdentifier>{59ce5e61-249b-4e80-804d-3866db962301}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\반복문">
+      <UniqueIdentifier>{65533516-a2ea-4dd0-9e08-b2d30ce70c05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\기초-데이터형">
+      <UniqueIdentifier>{4630ed96-f902-4e04-b7ed-ad6f7ba2bddc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\기초-출력변환">
+      <UniqueIdentifier>{c9097c64-f3e2-419e-9689-220c187e8429}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\기초-산술연산">
+      <UniqueIdentifier>{a3767c2d-b407-4e57-bb5b-62951eb617a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\기초 -비트시프트">
+      <UniqueIdentifier>{9fb63366-7c2e-41e6-a2b6-e6705367314c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\기초-비교연산">
+      <UniqueIdentifier>{bce98717-26b4-4060-bb85-382ec3e030a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\기초-논리연산">
+      <UniqueIdentifier>{78213edb-2867-4756-9779-3eb3aefb59c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\기초-비트단위논리연산">
+      <UniqueIdentifier>{458e06b7-e3d8-4ea5-b517-8855ce41d206}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\기초 -삼항연산">
+      <UniqueIdentifier>{90edf23f-b956-4ceb-a57e-d57e072780e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\기초-조건">
+      <UniqueIdentifier>{0d7c2cfb-4560-436c-a155-33c8c63827b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\기초-반복실행구조">
+      <UniqueIdentifier>{9daa09e4-d23b-450a-85c7-2a08f8c3100e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\기초-종합">
+      <UniqueIdentifier>{e30e9eed-7da3-4499-a8b2-53028cd383dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\기초 - 1차원 배열">
+      <UniqueIdentifier>{65bc253a-26ca-46b8-9ef1-33d5d591f430}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="1002 출력하기02.c">
+      <Filter>소스 파일\기초 출력%281%29</Filter>
+    </ClCompile>
+    <ClCompile Include="1001 출력하기01.c">
+      <Filter>소스 파일\기초 출력%281%29</Filter>
+    </ClCompile>
+    <ClCompile Include="1003 출력하기03.c">
+      <Filter>소스 파일\기초 출력%281%29</Filter>
+    </ClCompile>
+    <ClCompile Include="1004 출력하기04.c">
+      <Filter>소스 파일\기초 출력%281%29</Filter>
+    </ClCompile>
+    <ClCompile Include="1005 출력하기05.c">
+      <Filter>소스 파일\기초 출력%281%29</Filter>
+    </ClCompile>
+    <ClCompile Include="1006 출력허기06.c">
+      <Filter>소스 파일\기초 출력%281%29</Filter>
+    </ClCompile>
+    <ClCompile Include="1007 출력하기07 버전 문제인듯.c">
+      <Filter>소스 파일\기초 출력%281%29</Filter>
+    </ClCompile>
+    <ClCompile Include="1008 출력하기.c">
+      <Filter>소스 파일\기초 출력%281%29</Filter>
+    </ClCompile>
+    <ClCompile Include="1010 정수 1개 입력받아 출력.c">
+      <Filter>소스 파일\기초-입출력%282%29</Filter>
+    </ClCompile>
+    <ClCompile Include="1011 문자 1개 입력받아 그대로 출력.c">
+      <Filter>소스 파일\기초-입출력%282%29</Filter>
+    </ClCompile>
+    <ClCompile Include="1012 실수 1개 입력받아 그대로 출력.c">
+      <Filter>소스 파일\기초-입출력%282%29</Filter>
+    </ClCompile>
+    <ClCompile Include="1014 문자 2개입력받아 순서 바꿔 출력.c">
+      <Filter>소스 파일\기초-입출력%282%29</Filter>
+    </ClCompile>
+    <ClCompile Include="1013 정수 2개 입력받아 그대로 출력.c">
+      <Filter>소스 파일\기초-입출력%282%29</Filter>
+    </ClCompile>
+    <ClCompile Include="1015 실수 입력받아 둘쩨 자리까지 추력.c">
+      <Filter>소스 파일\기초-입출력%282%29</Filter>
+    </ClCompile>
+    <ClCompile Include="1017 정수 1개 입력받아 3번 출력하기.c">
+      <Filter>소스 파일\기초-입출력%282%29</Filter>
+    </ClCompile>
+    <ClCompile Include="10 18시간 입력받아 그대로 출력.c">
+      <Filter>소스 파일\기초-입출력%282%29</Filter>
+    </ClCompile>
+    <ClCompile Include="1019 연월일 입력받아 그대로 출력%28틀림%29.c">
+      <Filter>소스 파일\기초-입출력%282%29</Filter>
+    </ClCompile>
+    <ClCompile Include="1020 주민번호 입력받아 형태 다르게 출력.c">
+      <Filter>소스 파일\기초-입출력%282%29</Filter>
+    </ClCompile>
+    <ClCompile Include="1021 단어 1개 입력받아 그대로 출력.c">
+      <Filter>소스 파일\기초-입출력%282%29</Filter>
+    </ClCompile>
+    <ClCompile Include="1022 문장 1개 입력 받아 그대로 출력.c">
+      <Filter>소스 파일\기초-입출력%282%29</Filter>
+    </ClCompile>
+    <ClCompile Include="1023 실수 1개 입력받아 부분별로 출력.c">
+      <Filter>소스 파일\기초-입출력%282%29</Filter>
+    </ClCompile>
+    <ClCompile Include="1024 단어 1개 입력 받아 나누어 출력.c">
+      <Filter>소스 파일\기초-입출력%282%29</Filter>
+    </ClCompile>
+    <ClCompile Include="1025 정수 1개 입력받아 나누어 출력.c">
+      <Filter>소스 파일\기초-입출력%282%29</Filter>
+    </ClCompile>
+    <ClCompile Include="1026 시분초 입력받아 분만 출력.c">
+      <Filter>소스 파일\기초-입출력%282%29</Filter>
+    </ClCompile>
+    <ClCompile Include="1027 년월일 입력 받아 형식 바꿔 출력.c">
+      <Filter>소스 파일\기초-입출력%282%29</Filter>
+    </ClCompile>
+    <ClCompile Include="1028 정수 1개 입력받아 그대로 출력하기2.c">
+      <Filter>소스 파일\기초-데이터형</Filter>
+    </ClCompile>
+    <ClCompile Include="1029 실수 1개 입력받아 그대로 출력2.c">
+      <Filter>소스 파일\기초-데이터형</Filter>
+    </ClCompile>
+    <ClCompile Include="1030 정수 1개 입력받아 그대로 출력3.c">
+      <Filter>소스 파일\기초-데이터형</Filter>
+    </ClCompile>
+    <ClCompile Include="1031 10진 정수 1개 입력받아 8진수로 출력.c">
+      <Filter>소스 파일\기초-출력변환</Filter>
+    </ClCompile>
+    <ClCompile Include="1032 10진수 16진수로 출력.c">
+      <Filter>소스 파일\기초-출력변환</Filter>
+    </ClCompile>
+    <ClCompile Include="1033 10진수 정수 입력 16진수 출력.c">
+      <Filter>소스 파일\기초-출력변환</Filter>
+    </ClCompile>
+    <ClCompile Include="1034 8진수 입력 받아 10진수 출력.c">
+      <Filter>소스 파일\기초-출력변환</Filter>
+    </ClCompile>
+    <ClCompile Include="1035 16진수 8진수로.c">
+      <Filter>소스 파일\기초-출력변환</Filter>
+    </ClCompile>
+    <ClCompile Include="1036 영문자 1개 입력받아 10진수 출력.c">
+      <Filter>소스 파일\기초-출력변환</Filter>
+    </ClCompile>
+    <ClCompile Include="1037 정수 입력받아 아스키로 출력.c">
+      <Filter>소스 파일\기초-출력변환</Filter>
+    </ClCompile>
+    <ClCompile Include="1039 정수 2개 입력받아 합출력하기2.c">
+      <Filter>소스 파일\기초-산술연산</Filter>
+    </ClCompile>
+    <ClCompile Include="1038 정수 2개 입력받아 합출력.c">
+      <Filter>소스 파일\기초-산술연산</Filter>
+    </ClCompile>
+    <ClCompile Include="1040 정수 1개 입력받아 부호 바꿔 출력.c">
+      <Filter>소스 파일\기초-산술연산</Filter>
+    </ClCompile>
+    <ClCompile Include="1041 문자 1개 입력받아 다음 문자 출력.c">
+      <Filter>소스 파일\기초-산술연산</Filter>
+    </ClCompile>
+    <ClCompile Include="1042 정수 2개 입력받아 나눈 몫 출력.c">
+      <Filter>소스 파일\기초-산술연산</Filter>
+    </ClCompile>
+    <ClCompile Include="1043 정수 2개 입력받아 나눈 나머지 출력.c">
+      <Filter>소스 파일\기초-산술연산</Filter>
+    </ClCompile>
+    <ClCompile Include="1044 정수 1개 입력받아 1더해 출력.c">
+      <Filter>소스 파일\기초-산술연산</Filter>
+    </ClCompile>
+    <ClCompile Include="1045 정수 2개 입력받아 자동 계산.c">
+      <Filter>소스 파일\기초-산술연산</Filter>
+    </ClCompile>
+    <ClCompile Include="1046 정수 3개 입력받아 합과 평균 출력.c">
+      <Filter>소스 파일\기초-산술연산</Filter>
+    </ClCompile>
+    <ClCompile Include="1047 정수 1개 입력 받아 2배 곱해 출력.c">
+      <Filter>소스 파일\기초 -비트시프트</Filter>
+    </ClCompile>
+    <ClCompile Include="1048 한 번에 거듭제곱 배로 출력.c">
+      <Filter>소스 파일\기초 -비트시프트</Filter>
+    </ClCompile>
+    <ClCompile Include="1049 두 정수 입력받아 비교하기.c">
+      <Filter>소스 파일\기초-비교연산</Filter>
+    </ClCompile>
+    <ClCompile Include="1050 두 정수 입력받아 비교하기2.c">
+      <Filter>소스 파일\기초-비교연산</Filter>
+    </ClCompile>
+    <ClCompile Include="1051 두 정수 입력받아 비교하기3.c">
+      <Filter>소스 파일\기초-비교연산</Filter>
+    </ClCompile>
+    <ClCompile Include="1052 두 정수 입력받아 비교4.c">
+      <Filter>소스 파일\기초-비교연산</Filter>
+    </ClCompile>
+    <ClCompile Include="1053 참 거짓 바꾸기.c">
+      <Filter>소스 파일\기초-논리연산</Filter>
+    </ClCompile>
+    <ClCompile Include="1054 둘 다 참일 경우만 참 출력.c">
+      <Filter>소스 파일\기초-논리연산</Filter>
+    </ClCompile>
+    <ClCompile Include="1055 하나라도 참이면 참 출력.c">
+      <Filter>소스 파일\기초-논리연산</Filter>
+    </ClCompile>
+    <ClCompile Include="1056 참,거짓 서로 다를 때에만 참 출력.c">
+      <Filter>소스 파일\기초-논리연산</Filter>
+    </ClCompile>
+    <ClCompile Include="1057 참,가짓 서로 같을 때에만 참 출력.c">
+      <Filter>소스 파일\기초-논리연산</Filter>
+    </ClCompile>
+    <ClCompile Include="1058 둘 다 거짓일 경우만 참 출력.c">
+      <Filter>소스 파일\기초-논리연산</Filter>
+    </ClCompile>
+    <ClCompile Include="1059 비트 단위로 not 하여 출력.c">
+      <Filter>소스 파일\기초-비트단위논리연산</Filter>
+    </ClCompile>
+    <ClCompile Include="1060 비트 단위로 and 하여 출력하기.c">
+      <Filter>소스 파일\기초-비트단위논리연산</Filter>
+    </ClCompile>
+    <ClCompile Include="1061 비트 단위 or하여 출력.c">
+      <Filter>소스 파일\기초-비트단위논리연산</Filter>
+    </ClCompile>
+    <ClCompile Include="1062 비트단위로 xor 출력.c">
+      <Filter>소스 파일\기초-비트단위논리연산</Filter>
+    </ClCompile>
+    <ClCompile Include="1063 두 정수 입력받아 큰 수 출력.c">
+      <Filter>소스 파일\기초 -삼항연산</Filter>
+    </ClCompile>
+    <ClCompile Include="1064 정수 3개 입력받아 갖아 작은 수 출력.c">
+      <Filter>소스 파일\기초 -삼항연산</Filter>
+    </ClCompile>
+    <ClCompile Include="1065 정수 3개 입력받아 짝수만 출력.c">
+      <Filter>소스 파일\기초-조건</Filter>
+    </ClCompile>
+    <ClCompile Include="1066 정수 3개 입력받아 짝,홀 출력하기.c">
+      <Filter>소스 파일\기초-조건</Filter>
+    </ClCompile>
+    <ClCompile Include="1067 정수 1개 입력받아 분석.c">
+      <Filter>소스 파일\기초-조건</Filter>
+    </ClCompile>
+    <ClCompile Include="1068 정수 1개 입력받아 평가 출력.c">
+      <Filter>소스 파일\기초-조건</Filter>
+    </ClCompile>
+    <ClCompile Include="1069 평가 입력받아 다르게 출력하기.c">
+      <Filter>소스 파일\기초-조건</Filter>
+    </ClCompile>
+    <ClCompile Include="1070 월 입력받아 계절 출력.c">
+      <Filter>소스 파일\기초-조건</Filter>
+    </ClCompile>
+    <ClCompile Include="1071 0입력될 때까지 무한 출력하기.c">
+      <Filter>소스 파일\기초-반복실행구조</Filter>
+    </ClCompile>
+    <ClCompile Include="1072 정수 입력받아 계속 출력.c">
+      <Filter>소스 파일\기초-반복실행구조</Filter>
+    </ClCompile>
+    <ClCompile Include="1073 0 입력될 때까지 무한 출력하기2.c">
+      <Filter>소스 파일\기초-반복실행구조</Filter>
+    </ClCompile>
+    <ClCompile Include="1074 정수 1개 입력받아 카운트다운 출력.c">
+      <Filter>소스 파일\기초-반복실행구조</Filter>
+    </ClCompile>
+    <ClCompile Include="1075 정수 1개 입력받아 카운터다운 출력하기2.c">
+      <Filter>소스 파일\기초-반복실행구조</Filter>
+    </ClCompile>
+    <ClCompile Include="1076 문자 1개 입력받아 알파벳 출력하기.c">
+      <Filter>소스 파일\기초-반복실행구조</Filter>
+    </ClCompile>
+    <ClCompile Include="1077 정수 1개 입력받아 그 수까지 출력.c">
+      <Filter>소스 파일\기초-반복실행구조</Filter>
+    </ClCompile>
+    <ClCompile Include="1078 짝수 합 구하기.c">
+      <Filter>소스 파일\기초-종합</Filter>
+    </ClCompile>
+    <ClCompile Include="1079 원하는 문자가 입력될 때까지 반복 출력하기.c">
+      <Filter>소스 파일\기초-종합</Filter>
+    </ClCompile>
+    <ClCompile Include="1080 언제까지 더해야할까.c">
+      <Filter>소스 파일\기초-종합</Filter>
+    </ClCompile>
+    <ClCompile Include="1081 주사위를 2개 던지면.c">
+      <Filter>소스 파일\기초-종합</Filter>
+    </ClCompile>
+    <ClCompile Include="1082 16진수 구구단.c">
+      <Filter>소스 파일\기초-종합</Filter>
+    </ClCompile>
+    <ClCompile Include="1083 3 6 9 게임의 왕이 되자.c">
+      <Filter>소스 파일\기초-종합</Filter>
+    </ClCompile>
+    <ClCompile Include="1084 빛 섞어 색 만들기.c">
+      <Filter>소스 파일\기초-종합</Filter>
+    </ClCompile>
+    <ClCompile Include="1085 소리 파일 저장용량 계산.c">
+      <Filter>소스 파일\기초-종합</Filter>
+    </ClCompile>
+    <ClCompile Include="1086 그림 파일 저장용량 계산하기.c">
+      <Filter>소스 파일\기초-종합</Filter>
+    </ClCompile>
+    <ClCompile Include="1087 여기까지 이제 그만.c">
+      <Filter>소스 파일\기초-종합</Filter>
+    </ClCompile>
+    <ClCompile Include="1088 3의 배수는 통과.c">
+      <Filter>소스 파일\기초-종합</Filter>
+    </ClCompile>
+    <ClCompile Include="1089 수 나열하기1.c">
+      <Filter>소스 파일\기초-종합</Filter>
+    </ClCompile>
+    <ClCompile Include="1090 수 나열하기2.c">
+      <Filter>소스 파일\기초-종합</Filter>
+    </ClCompile>
+    <ClCompile Include="1091 수 나열하기3.c">
+      <Filter>소스 파일\기초-종합</Filter>
+    </ClCompile>
+    <ClCompile Include="1092 함께 문제 푸는 날.c">
+      <Filter>소스 파일\기초-종합</Filter>
+    </ClCompile>
+    <ClCompile Include="1093 이상한 출석 번호 부르기1.c">
+      <Filter>소스 파일\기초 - 1차원 배열</Filter>
+    </ClCompile>
+    <ClCompile Include="1094 이상한 출석 번호 부르기2.c">
+      <Filter>소스 파일\기초 - 1차원 배열</Filter>
+    </ClCompile>
+    <ClCompile Include="1095 이상한 출석 번호 부르기3.c">
+      <Filter>소스 파일\기초 - 1차원 배열</Filter>
+    </ClCompile>
+    <ClCompile Include="1096 바둑판에 흰 돌 놓기.c">
+      <Filter>소스 파일\기초 - 1차원 배열</Filter>
+    </ClCompile>
+    <ClCompile Include="1097 바둑알 십자 뒤집기.c">
+      <Filter>소스 파일\기초 - 1차원 배열</Filter>
+    </ClCompile>
+    <ClCompile Include="1098 설탕과자 뽑기.c">
+      <Filter>소스 파일\기초 - 1차원 배열</Filter>
+    </ClCompile>
+    <ClCompile Include="1099 성실한 개미.c">
+      <Filter>소스 파일\기초 - 1차원 배열</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
