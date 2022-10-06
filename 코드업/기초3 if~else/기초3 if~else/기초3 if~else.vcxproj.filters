@@ -138,5 +138,11 @@
     <ClCompile Include="1229 비만도 측정2.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="1230 터널 통과하기2.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1231 계산기1.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
