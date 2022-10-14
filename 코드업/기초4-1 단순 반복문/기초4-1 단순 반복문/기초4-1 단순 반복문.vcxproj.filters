@@ -18,5 +18,89 @@
     <ClCompile Include="1251 1부터 100까지 출력.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="1252 1부터 n까지 출력하기.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1253 a부터b까지출력.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1254 알파벳 출력하기.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1255 두 실수 사이 출력하기.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1256 별 출력하기.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1257 두 수 사이의 홀수 출력하기.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1258 1부터 n까지 합 구하기.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1259 1부터 n까지 중 짝수의 합 구하기.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1260 3의 배수의 합.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1261 First Special Judge(test).c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1265 구구단 출력하기1.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1266 n개의 수의 합.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1267 n개의 수 중 5의 배수의 합.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1268 n개의 수 중 짝수의 개수.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1269 수열의 값 구하기.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1270 1의 개수는1.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1271 최댓값 구하기.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1272 기부%28이 문제 좀 어렵다이%29.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1273 약수 구하기.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1274 소수 판별.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1275 k제곱 구하기.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1276 팩토리얼 계산.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1277 몇 번째 데이터 출력하기.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1278 자릿수 계산.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1280 홀수는 더하고 짝수는 빼고2.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1281 홀수는 더하고 짝수는 빼고3.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1282 제곱수 만들기.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1279 홀수는 더하고 짝수는 빼고.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

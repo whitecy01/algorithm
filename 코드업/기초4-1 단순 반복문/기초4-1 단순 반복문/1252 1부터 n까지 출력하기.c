@@ -4,8 +4,10 @@
 int main()
 {
 	int  i;
+	int input;
+	scanf("%d", &input);
 
-	for ( i = 1; i <= 100; i++)
+	for (i = 1; i <= input; i++)
 	{
 		printf("%d ", i);
 	}
