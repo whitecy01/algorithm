@@ -102,5 +102,14 @@
     <ClCompile Include="1279 홀수는 더하고 짝수는 빼고.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="1283 주식 투자.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1284 암호 해독%28이 문제 물어보기%29.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1285 계산기2.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
