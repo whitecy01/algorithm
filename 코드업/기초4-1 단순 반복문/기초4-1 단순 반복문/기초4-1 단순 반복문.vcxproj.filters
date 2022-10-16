@@ -111,5 +111,20 @@
     <ClCompile Include="1285 계산기2.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="1286 최댓값, 최솟값.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1287 구구단을 로 출력하기.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1294 시저의 암호2%28출력한계초과, EOF%29.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1295 알파벳 대소문자 변환%28EOF%29 이 문제 고생.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1675 시저의 함호1.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
