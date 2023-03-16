@@ -13,22 +13,28 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="소스 파일\0 단계">
-      <UniqueIdentifier>{3c56592d-a9e0-47d8-9aa2-3fbc7a72a7bb}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="1번.c">
+    <ClCompile Include="1365 사각형 출력하기%282시간 동안 품 ㅋ, 선배들한테 물어보기%29.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="2번.c">
+    <ClCompile Include="1366 사각형 출력하기.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="옹알이 (1).c">
-      <Filter>소스 파일\0 단계</Filter>
+    <ClCompile Include="1365 다른 답.c">
+      <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="다음에 올 숫자.c">
-      <Filter>소스 파일\0 단계</Filter>
+    <ClCompile Include="1366 다른 답.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1369 빗금 친 사각형 출력하기.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1370 지그재그 출력하기.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1371 마름모 출력.c">
+      <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
