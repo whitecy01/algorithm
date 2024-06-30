@@ -27,13 +27,6 @@ int main(){
         {
             arr[q] = k;
         }
-        // cout << "here : ";
-        // for (int i = 0; i < busket; i++)
-        // {
-        //     cout << arr[i] << " ";
-        // }
-        // cout << "\n";
-
         
     }
 
