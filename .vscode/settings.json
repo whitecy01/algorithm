@@ -49,6 +49,9 @@
         "variant": "cpp",
         "vector": "cpp",
         "algorithm": "cpp",
-        "두 수의 곱.C": "cpp"
+        "두 수의 곱.C": "cpp",
+        "iterator": "cpp",
+        "list": "cpp",
+        "deque": "cpp"
     }
 }
