@@ -24,5 +24,4 @@ int main(){
         lst.pop_front();
     }
     cout<< lst.front() << ">";
-
 }
