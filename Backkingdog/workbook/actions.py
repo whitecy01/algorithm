@@ -23,34 +23,36 @@ def parse_category():
       category.append(line.strip().split(','))
   return category
 
-# def get_problem_info(workbook_url):
-#   headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36'}
-#   txt = requests.get(workbook_url, headers=headers).text
-#   pattern = '/problem/'
-#   ret = []
-#   while True:
-#     x = txt.find(pattern)
-#     if x == -1: break
-#     txt = txt[x+9:]
-#     prob_id, prob_name = '', ''
-#     i = 0
-#     while txt[i] in '0123456789':
-#       prob_id += txt[i]
-#       i += 1
-#     if not prob_id: continue
-#     i += 2
-#     while txt[i] != '<':
-#       prob_name += txt[i]
-#       i += 1
-#     ret.append((prob_id, prob_name))
-#   return ret
 def get_problem_info(workbook_url):
-  problem_list = []
-  
-  # 직접 문제 ID를 추가하기 (직접 선택한 문제들)
-  problem_list.append(("1000", "A+B"))
+  headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36'}
+  txt = requests.get(workbook_url, headers=headers).text
+  pattern = '/problem/'
+  ret = []
+  while True:
+    x = txt.find(pattern)
+    if x == -1: break
+    txt = txt[x+9:]
+    prob_id, prob_name = '', ''
+    i = 0
+    while txt[i] in '0123456789':
+      prob_id += txt[i]
+      i += 1
+    if not prob_id: continue
+    i += 2
+    while txt[i] != '<':
+      prob_name += txt[i]
+      i += 1
+    ret.append((prob_id, prob_name))
+  return ret
 
-  return problem_list
+
+# def get_problem_info(workbook_url):
+#   problem_list = []
+  
+#   # 직접 문제 ID를 추가하기 (직접 선택한 문제들)
+#   problem_list.append(("1000", "A+B"))
+
+#   return problem_list
 
 CATEGORY = ["연습 문제", "기본 문제✔", "기본 문제", "응용 문제✔", "응용 문제"]
 
@@ -69,7 +71,7 @@ int main(void){
 }'''
   chapter_idx = 0
   for attr in attrs:
-    if len(attr) < 3: # No workbook
+    if len(attr) < 3 or not attr[2]: # No workbook
       pbars.append("")
       continue
     solution_num = 0
@@ -100,7 +102,7 @@ int main(void){
           if os.path.exists(file_path+'_'+str(i)+'.cpp'):
             code_attr += f", [별해 {i}]({file_path+'_'+str(i)+'.cpp'})"
         prob_table += f'| {CATEGORY[category_idx]} | {prob_id} | [{prob_name}](https://www.acmicpc.net/problem/{prob_id}) | {code_attr} |\n'
-    with open(attr[0]+'.md', 'w', encoding="UTF-8") as f:
+    with open('Backkingdog/workbook/' +attr[0]+'.md', 'w', encoding="UTF-8") as f:
       # progress bar
       f.write(f'# {attr[1]}\n\n')
       pbar = f'![100%](https://progress-bar.xyz/{solution_num}/?scale={len(problem_infos)}&title=progress&width=500&color=babaca&suffix=/{len(problem_infos)})'
@@ -123,6 +125,7 @@ def gen_total_workbook(attrs):
         f.write(f'| {attr[0]} | {attr[1]} | |\n')
       else:
         f.write(f'| {attr[0]} | [{attr[1]}](workbook/{attr[0].replace(" ", "%20")}.md) | {pbar} |\n')
+
 
 attrs = parse_links()
 category = parse_category()
