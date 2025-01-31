@@ -75,14 +75,14 @@ int main(void){
       pbars.append("")
       continue
     solution_num = 0
-    # solution_path = f'/Users/jeongjaeyoon/Documents/GitHub/algorithm/Backkingdog/{attr[0]}/'
-    solution_path = f'../{attr[0]}/'
-    print(attr[0] + " " + attr[2])
+    solution_path = f'/Users/jeongjaeyoon/Documents/GitHub/algorithm/Backkingdog/{attr[0]}/'
+    # solution_path = f'../{attr[0]}/'
+    # print(attr[0] + " " + attr[2])
     # print(BASE_DIR)
     # solution_path = os.path.join('/Users/jeongjaeyoon/Documents/GitHub/algorithm/Backkingdog/{attr[0]}')
     category_idx = 0
     problem_infos = get_problem_info(attr[2])
-    prob_table = '| 문제 분류 | 문제 | 문제 제목 | 정답 코드 |\n| :--: | :--: | :--: | :--: |\n'
+    prob_table = '| 문제 분류 | 문제 | 문제 제목 | 정답 유무 |\n| :--: | :--: | :--: | :--: |\n'
     for prob_id, prob_name in problem_infos:
       if prob_id in category[chapter_idx]:
         category_idx = category[chapter_idx].index(prob_id)
@@ -100,12 +100,14 @@ int main(void){
         prob_table += f'| {CATEGORY[category_idx]} | {prob_id} | [{prob_name}](https://www.acmicpc.net/problem/{prob_id}) | - |\n'
       else:
         solution_num += 1
-        code_attr = f'[정답 코드]({file_path.replace(" ", "%20")}.cpp)'
+        code_attr = f'[정답 유무]({file_path.replace(" ", "%20")}.cpp)'
         MAX_DIFFERENT_SOLUTION = 9
         for i in range(1, MAX_DIFFERENT_SOLUTION+1):
           if os.path.exists(file_path+'_'+str(i)+'.cpp'):
             code_attr += f", [별해 {i}]({file_path+'_'+str(i)+'.cpp'})"
-        prob_table += f'| {CATEGORY[category_idx]} | {prob_id} | [{prob_name}](https://www.acmicpc.net/problem/{prob_id}) | {code_attr} |\n'
+        # prob_table += f'| {CATEGORY[category_idx]} | {prob_id} | [{prob_name}](https://www.acmicpc.net/problem/{prob_id}) | {code_attr} |\n'
+        prob_table += f'| {CATEGORY[category_idx]} | {prob_id} | [{prob_name}](https://www.acmicpc.net/problem/{prob_id}) | ✅ |\n'
+
     with open('Backkingdog/workbook/' +attr[0]+'.md', 'w', encoding="UTF-8") as f:
       # progress bar
       f.write(f'# {attr[1]}\n\n')
