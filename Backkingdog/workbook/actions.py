@@ -58,7 +58,7 @@ CATEGORY = ["연습 문제", "기본 문제✔", "기본 문제", "응용 문제
 
 # gen 0x00.md to 0x??.md, proper prob_id.cpp for each solution directory
 def gen_ind_workbook(attrs, category):
-  txt = '''// Authored by : BaaaaaaaaaaarkingDog
+  txt = '''// Authored by : 정재윤
 // Co-authored by : -
 // http://boj.kr/****************
 #include <bits/stdc++.h>
