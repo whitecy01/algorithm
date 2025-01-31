@@ -1,0 +1,130 @@
+import os
+
+import requests
+
+pbars = []
+# ['0x11', '그리디', 'https://www.acmicpc.net/workbook/view/7320']
+# 현재 스크립트(actions.py)가 위치한 폴더 기준으로 파일 찾기
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+def parse_links():
+    file_path = os.path.join(BASE_DIR, "my_links.txt")  # 절대 경로 사용
+    attrs = []
+    with open(file_path, encoding="UTF-8") as f:
+        for line in f:
+            attrs.append(line.strip().split(','))
+    return attrs
+
+def parse_category():
+  file_path = os.path.join(BASE_DIR, "my_problems.txt")  # 절대 경로 사용
+  category = []
+  with open(file_path, encoding="UTF-8") as f:
+    for line in f:
+      category.append(line.strip().split(','))
+  return category
+
+# def get_problem_info(workbook_url):
+#   headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36'}
+#   txt = requests.get(workbook_url, headers=headers).text
+#   pattern = '/problem/'
+#   ret = []
+#   while True:
+#     x = txt.find(pattern)
+#     if x == -1: break
+#     txt = txt[x+9:]
+#     prob_id, prob_name = '', ''
+#     i = 0
+#     while txt[i] in '0123456789':
+#       prob_id += txt[i]
+#       i += 1
+#     if not prob_id: continue
+#     i += 2
+#     while txt[i] != '<':
+#       prob_name += txt[i]
+#       i += 1
+#     ret.append((prob_id, prob_name))
+#   return ret
+def get_problem_info(workbook_url):
+  problem_list = []
+  
+  # 직접 문제 ID를 추가하기 (직접 선택한 문제들)
+  problem_list.append(("1000", "A+B"))
+
+  return problem_list
+
+CATEGORY = ["연습 문제", "기본 문제✔", "기본 문제", "응용 문제✔", "응용 문제"]
+
+# gen 0x00.md to 0x??.md, proper prob_id.cpp for each solution directory
+def gen_ind_workbook(attrs, category):
+  txt = '''// Authored by : BaaaaaaaaaaarkingDog
+// Co-authored by : -
+// http://boj.kr/****************
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(void){
+  ios::sync_with_stdio(0);
+  cin.tie(0);
+  
+}'''
+  chapter_idx = 0
+  for attr in attrs:
+    if len(attr) < 3: # No workbook
+      pbars.append("")
+      continue
+    solution_num = 0
+    solution_path = f'/Users/jeongjaeyoon/Documents/GitHub/algorithm/Backkingdog/{attr[0]}/'
+    category_idx = 0
+    problem_infos = get_problem_info(attr[2])
+    prob_table = '| 문제 분류 | 문제 | 문제 제목 | 정답 코드 |\n| :--: | :--: | :--: | :--: |\n'
+    for prob_id, prob_name in problem_infos:
+      if prob_id in category[chapter_idx]:
+        category_idx = category[chapter_idx].index(prob_id)
+      file_path = solution_path + prob_id
+      if not os.path.exists(file_path + '.cpp'):
+        with open(file_path + '.cpp', 'w', encoding="UTF-8") as f:
+          f.write(txt)
+      try:
+        codes = open(file_path + '.cpp', 'r', encoding="UTF-8").read()
+      except: # EUC-KR -> UTF-8
+        codes = open(file_path + '.cpp', 'r', encoding="EUC-KR").read()
+        with open(file_path + '.cpp', 'w', encoding="UTF-8") as fw:
+          fw.write(codes)
+      if codes[:100] == txt[:100]:
+        prob_table += f'| {CATEGORY[category_idx]} | {prob_id} | [{prob_name}](https://www.acmicpc.net/problem/{prob_id}) | - |\n'
+      else:
+        solution_num += 1
+        code_attr = f'[정답 코드]({file_path.replace(" ", "%20")}.cpp)'
+        MAX_DIFFERENT_SOLUTION = 9
+        for i in range(1, MAX_DIFFERENT_SOLUTION+1):
+          if os.path.exists(file_path+'_'+str(i)+'.cpp'):
+            code_attr += f", [별해 {i}]({file_path+'_'+str(i)+'.cpp'})"
+        prob_table += f'| {CATEGORY[category_idx]} | {prob_id} | [{prob_name}](https://www.acmicpc.net/problem/{prob_id}) | {code_attr} |\n'
+    with open(attr[0]+'.md', 'w', encoding="UTF-8") as f:
+      # progress bar
+      f.write(f'# {attr[1]}\n\n')
+      pbar = f'![100%](https://progress-bar.xyz/{solution_num}/?scale={len(problem_infos)}&title=progress&width=500&color=babaca&suffix=/{len(problem_infos)})'
+      pbars.append(pbar)
+      f.write(pbar + '\n\n')
+      f.write(f'[문제집 링크]({attr[2]})\n\n')
+      f.write(prob_table)
+    chapter_idx += 1
+    
+# ['0x11', '그리디', 'https://www.acmicpc.net/workbook/view/7320']
+def gen_total_workbook(attrs):
+  with open('/Users/jeongjaeyoon/Documents/GitHub/algorithm/Backkingdog/workbook.md', 'w', encoding="UTF-8") as f:
+    f.write('''# 문제집 설명
+
+# 문제집
+| 번호 | 주제 | 진행도 |
+| :--: | :--: | :--: |\n''')
+    for attr, pbar in zip(attrs, pbars):
+      if len(attr) < 3: # No workbook
+        f.write(f'| {attr[0]} | {attr[1]} | |\n')
+      else:
+        f.write(f'| {attr[0]} | [{attr[1]}](workbook/{attr[0].replace(" ", "%20")}.md) | {pbar} |\n')
+
+attrs = parse_links()
+category = parse_category()
+gen_ind_workbook(attrs, category)
+gen_total_workbook(attrs)
