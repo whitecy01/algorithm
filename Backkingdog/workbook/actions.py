@@ -75,7 +75,11 @@ int main(void){
       pbars.append("")
       continue
     solution_num = 0
-    solution_path = f'/Users/jeongjaeyoon/Documents/GitHub/algorithm/Backkingdog/{attr[0]}/'
+    # solution_path = f'/Users/jeongjaeyoon/Documents/GitHub/algorithm/Backkingdog/{attr[0]}/'
+    solution_path = f'../{attr[0]}/'
+    print(attr[0] + " " + attr[2])
+    # print(BASE_DIR)
+    # solution_path = os.path.join('/Users/jeongjaeyoon/Documents/GitHub/algorithm/Backkingdog/{attr[0]}')
     category_idx = 0
     problem_infos = get_problem_info(attr[2])
     prob_table = '| 문제 분류 | 문제 | 문제 제목 | 정답 코드 |\n| :--: | :--: | :--: | :--: |\n'
