@@ -1,44 +1,63 @@
-name: Update Progress Bar
+name: Python application
 
 on:
   push:
-    branches:
-      - main
-  schedule:
-    - cron: "0 0 * * *"  # 매일 자정(UTC) 실행
-  workflow_dispatch:  # 수동 실행 가능
+    branches: [ master ]
 
 jobs:
-  update-progress:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+    - name: install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests     
 
-      - name: Set up Python
-        uses: actions/setup-python@v3
-        with:
-          python-version: '3.x'
+    # 📌 디버깅 단계: 작업 디렉토리와 파일 목록 확인
+    - name: Debug: Current Directory and File List
+      run: |
+        echo "📌 현재 작업 디렉토리:"
+        pwd
+        echo "📂 현재 파일 목록:"
+        ls -lah
+        echo "🔍 Backkingdog 디렉토리 내용:"
+        ls -lah Backkingdog
+        echo "🔍 workbook 디렉토리 내용:"
+        ls -lah Backkingdog/workbook
 
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install requests
+    # 📌 `my_links.txt` 및 `my_problems.txt` 존재 여부 확인
+    - name: Check for Required Files
+      run: |
+        if [ -f Backkingdog/workbook/my_links.txt ]; then
+          echo "✅ 'my_links.txt' 파일이 존재합니다."
+        else
+          echo "🚨 'my_links.txt' 파일을 찾을 수 없습니다."
+        fi
 
-      - name: Debug GitHub Actions Paths
-        run: |
-          echo "📌 현재 작업 디렉토리:"
-          pwd
-          echo "📂 현재 파일 목록:"
-          ls -lah
-
-      - name: Run Python script to update progress
-        run: python Backkingdog/workbook/actions.py
-
-      - name: Commit and Push if Changes
-        run: |
-          git config --local user.email "actions@github.com"
-          git config --local user.name "GitHub Actions"
-          git add workbook.md workbook/*
-          git diff --quiet && git diff --staged --quiet || git commit -m "🔄 Update progress bars"
-          git push
+        if [ -f Backkingdog/workbook/my_problems.txt ]; then
+          echo "✅ 'my_problems.txt' 파일이 존재합니다."
+        else
+          echo "🚨 'my_problems.txt' 파일을 찾을 수 없습니다."
+        fi
+    
+    - name: run code
+      run: |
+        cd Backkingdog/workbook
+        python actions.py
+    - name: commits
+      run: |
+        git config --local user.email "autoaction@autoaction.com"
+        git config --local user.name "[bot]auto-workbook"
+        git add .
+        git commit -m "[bot]auto workbook update"
+        
+    - name: push
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: master

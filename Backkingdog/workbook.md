@@ -12,7 +12,7 @@
 | 0x06 | [큐](workbook/0x06.md) | ![100%](https://progress-bar.xyz/0/?scale=3&title=progress&width=500&color=babaca&suffix=/3) |
 | 0x07 | [덱](workbook/0x07.md) | ![100%](https://progress-bar.xyz/0/?scale=4&title=progress&width=500&color=babaca&suffix=/4) |
 | 0x08 | [스택의 활용(수식의 괄호 쌍)](workbook/0x08.md) | ![100%](https://progress-bar.xyz/0/?scale=5&title=progress&width=500&color=babaca&suffix=/5) |
-| 0x09 | [BFS](workbook/0x09.md) | ![100%](https://progress-bar.xyz/0/?scale=30&title=progress&width=500&color=babaca&suffix=/30) |
+| 0x09 | [BFS](workbook/0x09.md) | ![100%](https://progress-bar.xyz/6/?scale=30&title=progress&width=500&color=babaca&suffix=/30) |
 | 0x0A | [DFS (문제집 X)](workbook/0x0A.md) |  |
 | 0x0B | [재귀](workbook/0x0B.md) | ![100%](https://progress-bar.xyz/0/?scale=10&title=progress&width=500&color=babaca&suffix=/10) |
 | 0x0C | [백트래킹](workbook/0x0C.md) | ![100%](https://progress-bar.xyz/0/?scale=20&title=progress&width=500&color=babaca&suffix=/20) |
@@ -20,7 +20,7 @@
 | 0x0E | [정렬 I](workbook/0x0E.md) | ![100%](https://progress-bar.xyz/1/?scale=8&title=progress&width=500&color=babaca&suffix=/8) |
 | 0x0F | [정렬 II](workbook/0x0F.md) | ![100%](https://progress-bar.xyz/0/?scale=9&title=progress&width=500&color=babaca&suffix=/9) |
 | 0x10 | [다이나믹 프로그래밍](workbook/0x10.md) | ![100%](https://progress-bar.xyz/0/?scale=44&title=progress&width=500&color=babaca&suffix=/44) |
-| 0x11 | [그리디](workbook/0x11.md) | ![100%](https://progress-bar.xyz/0/?scale=17&title=progress&width=500&color=babaca&suffix=/17) |
+| 0x11 | [그리디](workbook/0x11.md) | ![100%](https://progress-bar.xyz/2/?scale=17&title=progress&width=500&color=babaca&suffix=/17) |
 | 0x12 | [수학](workbook/0x12.md) | ![100%](https://progress-bar.xyz/0/?scale=39&title=progress&width=500&color=babaca&suffix=/39) |
 | 0x13 | [이분탐색](workbook/0x13.md) | ![100%](https://progress-bar.xyz/0/?scale=21&title=progress&width=500&color=babaca&suffix=/21) |
 | 0x14 | [투 포인터](workbook/0x14.md) | ![100%](https://progress-bar.xyz/0/?scale=11&title=progress&width=500&color=babaca&suffix=/11) |
