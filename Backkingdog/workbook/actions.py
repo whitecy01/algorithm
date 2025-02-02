@@ -107,8 +107,7 @@ int main(void){
             code_attr += f", [별해 {i}]({file_path+'_'+str(i)+'.cpp'})"
         # prob_table += f'| {CATEGORY[category_idx]} | {prob_id} | [{prob_name}](https://www.acmicpc.net/problem/{prob_id}) | {code_attr} |\n'
         prob_table += f'| {CATEGORY[category_idx]} | {prob_id} | [{prob_name}](https://www.acmicpc.net/problem/{prob_id}) | ✅ |\n'
-
-    with open('Backkingdog/workbook/' +attr[0]+'.md', 'w', encoding="UTF-8") as f:
+    with open('/Users/jeongjaeyoon/Documents/GitHub/algorithm/Backkingdog/workbook/' +attr[0]+'.md', 'w', encoding="UTF-8") as f:
       # progress bar
       f.write(f'# {attr[1]}\n\n')
       pbar = f'![100%](https://progress-bar.xyz/{solution_num}/?scale={len(problem_infos)}&title=progress&width=500&color=babaca&suffix=/{len(problem_infos)})'
