@@ -17,7 +17,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install requests     
-    - name: Debug: Current Directory and File List
+    - name: Debug Current Directory and File List
       run: |
         echo "📌 현재 작업 디렉토리:"
         pwd
