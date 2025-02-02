@@ -11,7 +11,7 @@ pbars = []
 
 def parse_links():
   attrs = []
-  with open('my_links.txt', encoding="UTF-8") as f:
+  with open('./my_links.txt', encoding="UTF-8") as f:
     for line in f:
       attrs.append(line.strip().split(','))
   return attrs
@@ -28,7 +28,7 @@ def parse_links():
 
 def parse_category():
     category = []
-    with open('my_problems.txt', encoding="UTF-8") as f:
+    with open('./my_problems.txt', encoding="UTF-8") as f:
       for line in f:
         category.append(line.strip().split(','))
     return category
