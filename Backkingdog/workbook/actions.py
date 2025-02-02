@@ -58,7 +58,7 @@ int main(void){
 }'''
   chapter_idx = 0
   for attr in attrs:
-    if len(attr) < 3: # No workbook
+    if len(attr) < 3 or not attr[2]: # No workbook
       pbars.append("")
       continue
     solution_num = 0
