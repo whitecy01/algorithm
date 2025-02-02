@@ -5,8 +5,10 @@ import requests
 pbars = []
 # ['0x11', '그리디', 'https://www.acmicpc.net/workbook/view/7320']
 # 현재 스크립트(actions.py)가 위치한 폴더 기준으로 파일 찾기
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+# BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
+BASE_DIR = os.getenv("GITHUB_WORKSPACE", os.path.dirname(os.path.abspath(__file__)))
+print(f"📌 BASE_DIR 경로: {BASE_DIR}")
 def parse_links():
     file_path = os.path.join(BASE_DIR, "my_links.txt")  # 절대 경로 사용
     attrs = []
