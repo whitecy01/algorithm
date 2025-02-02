@@ -153,7 +153,9 @@ def gen_total_workbook(attrs):
       if len(attr) < 3: # No workbook
         f.write(f'| {attr[0]} | {attr[1]} | |\n')
       else:
-        f.write(f'| {attr[0]} | [{attr[1]}](Backkingdog/workbook/{attr[0].replace(" ", "%20")}.md) | {pbar} |\n')
+        print(attr[1])
+        print(attr[0])
+        f.write(f'| {attr[0]} | [{attr[1]}](workbook/{attr[0].replace(" ", "%20")}.md) | {pbar} |\n')
 
 attrs = parse_links()
 category = parse_category()
