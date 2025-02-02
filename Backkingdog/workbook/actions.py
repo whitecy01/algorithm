@@ -104,7 +104,7 @@ def gen_total_workbook(attrs):
   with open('../workbook.md', 'w', encoding="UTF-8") as f:
     f.write('''# 문제집 설명
 
-이 문제집은 BaaaaaaaarkingDog님의 https://github.com/encrypted-def/basic-algo-lecture에서 문제와 템플릿을 들고 왔습니다.
+이 문제집은 BaaaaaaaarkingDog님의 https://github.com/encrypted-def/basic-algo-lecture 에서 문제와 템플릿을 들고 왔습니다.
 
 이론을 잘 이해했더라도 문제를 풀어내지 못한다면 아무런 의미가 없기 때문에 반드시 문제를 많이 풀어봐야 한다.
 
