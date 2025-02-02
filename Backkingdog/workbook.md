@@ -1,6 +1,6 @@
 # 문제집 설명
 
-이 문제집은 BaaaaaaaarkingDog님의 https://github.com/encrypted-def/basic-algo-lecture에서 문제와 템플릿을 들고 왔습니다.
+이 문제집은 BaaaaaaaarkingDog님의 https://github.com/encrypted-def/basic-algo-lecture 에서 문제와 템플릿을 들고 왔습니다.
 
 이론을 잘 이해했더라도 문제를 풀어내지 못한다면 아무런 의미가 없기 때문에 반드시 문제를 많이 풀어봐야 한다.
 
@@ -60,3 +60,7 @@
 | 0x1D | [다익스트라 알고리즘](workbook/0x1D.md) | ![100%](https://progress-bar.xyz/0/?scale=14&title=progress&width=500&color=babaca&suffix=/14) |
 | 0x1E | [KMP](workbook/0x1E.md) | ![100%](https://progress-bar.xyz/0/?scale=8&title=progress&width=500&color=babaca&suffix=/8) |
 | 0x1F | [트라이](workbook/0x1F.md) | ![100%](https://progress-bar.xyz/0/?scale=10&title=progress&width=500&color=babaca&suffix=/10) |
+| Appendix A | [문자열 기초](workbook/Appendix%20A.md) | ![100%](https://progress-bar.xyz/0/?scale=16&title=progress&width=500&color=babaca&suffix=/16) |
+| Appendix B | 동적 배열 (문제집 X) | |
+| Appendix C | [비트마스킹](workbook/Appendix%20C.md) | ![100%](https://progress-bar.xyz/0/?scale=7&title=progress&width=500&color=babaca&suffix=/7) |
+| Appendix D | [Union-Find](workbook/Appendix%20D.md) | ![100%](https://progress-bar.xyz/0/?scale=9&title=progress&width=500&color=babaca&suffix=/9) |
