@@ -79,13 +79,11 @@ int main(void){
 }'''
     chapter_idx = 0
     for attr in attrs:
-        if len(attr) < 3 or not attr[2]:  # 문제집 링크가 없으면 건너뜀
+        if len(attr) < 3:  # 문제집 링크가 없으면 건너뜀
             pbars.append("")
             continue
-        
         solution_num = 0
         solution_path = f'../{attr[0]}/'
-        # solution_path = os.path.join(BASE_DIR, f'Backkingdog/{attr[0]}/')
         category_idx = 0
         problem_infos = get_problem_info(attr[2])
         prob_table = '| 문제 분류 | 문제 | 문제 제목 | 정답 유무 |\n| :--: | :--: | :--: | :--: |\n'
