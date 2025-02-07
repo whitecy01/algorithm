@@ -4,6 +4,16 @@ import os
 import requests
 
 pbars = []
+
+import os
+
+def check_file_changes():
+    print("📂 파일 변경 여부 확인:")
+    os.system("git status")
+    os.system("ls -lah")
+
+
+
 # ['0x11', '그리디', 'https://www.acmicpc.net/workbook/view/7320']
 def parse_links():
   attrs = []
@@ -20,26 +30,67 @@ def parse_category():
   return category
 
 def get_problem_info(workbook_url):
-  headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36'}
-  txt = requests.get(workbook_url, headers=headers).text
-  pattern = '/problem/'
-  ret = []
-  while True:
-    x = txt.find(pattern)
-    if x == -1: break
-    txt = txt[x+9:]
-    prob_id, prob_name = '', ''
-    i = 0
-    while txt[i] in '0123456789':
-      prob_id += txt[i]
-      i += 1
-    if not prob_id: continue
-    i += 2
-    while txt[i] != '<':
-      prob_name += txt[i]
-      i += 1
-    ret.append((prob_id, prob_name))
-  return ret
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36'
+    }
+
+    try:
+        response = requests.get(workbook_url, headers=headers, timeout=10)
+        print(f"📡 API 요청: {workbook_url} → 상태 코드: {response.status_code}")
+
+        if response.status_code != 200:
+            print(f"🚨 요청 실패: {response.status_code} - {response.text[:100]}")
+            return []  # 빈 리스트 반환하여 오류 방지
+        
+        txt = response.text
+    except requests.exceptions.RequestException as e:
+        print(f"🚨 요청 중 예외 발생: {e}")
+        return []
+    
+    # 문제 ID 파싱 과정
+    pattern = '/problem/'
+    ret = []
+    while True:
+        x = txt.find(pattern)
+        if x == -1:
+            break
+        txt = txt[x+9:]
+        prob_id, prob_name = '', ''
+        i = 0
+        while txt[i] in '0123456789':
+            prob_id += txt[i]
+            i += 1
+        if not prob_id:
+            continue
+        i += 2
+        while txt[i] != '<':
+            prob_name += txt[i]
+            i += 1
+        ret.append((prob_id, prob_name))
+    
+    return ret
+
+# def get_problem_info(workbook_url):
+  # headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36'}
+  # txt = requests.get(workbook_url, headers=headers).text
+  # pattern = '/problem/'
+  # ret = []
+  # while True:
+  #   x = txt.find(pattern)
+  #   if x == -1: break
+  #   txt = txt[x+9:]
+  #   prob_id, prob_name = '', ''
+  #   i = 0
+  #   while txt[i] in '0123456789':
+  #     prob_id += txt[i]
+  #     i += 1
+  #   if not prob_id: continue
+  #   i += 2
+  #   while txt[i] != '<':
+  #     prob_name += txt[i]
+  #     i += 1
+  #   ret.append((prob_id, prob_name))
+  # return ret
 
 CATEGORY = ["연습 문제", "기본 문제✔", "기본 문제", "응용 문제✔", "응용 문제"]
 
@@ -142,3 +193,5 @@ attrs = parse_links()
 category = parse_category()
 gen_ind_workbook(attrs, category)
 gen_total_workbook(attrs)
+# 실행이 끝난 후 변경 사항 확인
+check_file_changes()
