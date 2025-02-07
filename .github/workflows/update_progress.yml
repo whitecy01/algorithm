@@ -49,6 +49,11 @@ jobs:
         git config --local user.email "autoaction@autoaction.com"
         git config --local user.name "[bot]auto-workbook"
         git add .
+        if ! git diff --cached --quiet; then
+          git commit -m "[bot]auto workbook update"
+        else
+          echo "✅ 변경된 내용이 없어 커밋을 건너뜁니다."
+        fi
         git commit -m "[bot]auto workbook update"
   
     - name: push
