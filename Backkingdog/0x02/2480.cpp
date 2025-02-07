@@ -27,4 +27,5 @@ int main(void){
   else if (a[1] == a[2] )
     cout << 1000 + a[1] * 100; 
 
+    
 }
