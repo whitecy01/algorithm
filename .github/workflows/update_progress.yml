@@ -40,6 +40,15 @@ jobs:
         else
           echo "🚨 'my_problems.txt' 파일을 찾을 수 없습니다."
         fi
+    - name: Pull latest changes
+      run: |
+        git pull origin master --rebase
+    - name: Debug Git Status
+      run: |
+        echo "🔍 현재 Git 상태 확인"
+        git status
+        echo "🔍 최근 커밋 로그"
+        git log --oneline -5
     - name: run code
       run: |
         cd Backkingdog/workbook
@@ -48,6 +57,7 @@ jobs:
       id: verify_diff
       run: |
         git diff --quiet . || echo "changed=true" >> $GITHUB_OUTPUT
+
     - name: commits
       if: steps.verify_diff.outputs.changed == 'true' 
       run: |
