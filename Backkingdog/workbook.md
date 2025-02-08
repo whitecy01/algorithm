@@ -30,8 +30,8 @@
 | :--: | :--: | :--: |
 | 0x00 | 오리엔테이션 (문제집 X) | |
 | 0x01 | 기초 코드 작성 요령 I (문제집 X) | |
-| 0x02 | [기초 코드 작성 요령 II](workbook/0x02.md) | ![100%](https://progress-bar.xyz/0/?scale=27&title=progress&width=500&color=babaca&suffix=/27) |
-| 0x03 | [배열](workbook/0x03.md) | ![100%](https://progress-bar.xyz/5/?scale=8&title=progress&width=500&color=babaca&suffix=/8) |
+| 0x02 | [기초 코드 작성 요령 II](workbook/0x02.md) | ![100%](https://progress-bar.xyz/7/?scale=27&title=progress&width=500&color=babaca&suffix=/27) |
+| 0x03 | [배열](workbook/0x03.md) | ![100%](https://progress-bar.xyz/8/?scale=8&title=progress&width=500&color=babaca&suffix=/8) |
 | 0x04 | [연결 리스트](workbook/0x04.md) | ![100%](https://progress-bar.xyz/0/?scale=3&title=progress&width=500&color=babaca&suffix=/3) |
 | 0x05 | [스택](workbook/0x05.md) | ![100%](https://progress-bar.xyz/0/?scale=8&title=progress&width=500&color=babaca&suffix=/8) |
 | 0x06 | [큐](workbook/0x06.md) | ![100%](https://progress-bar.xyz/0/?scale=3&title=progress&width=500&color=babaca&suffix=/3) |
