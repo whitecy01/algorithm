@@ -30,67 +30,39 @@ def parse_category():
   return category
 
 def get_problem_info(workbook_url):
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36'
-    }
-
-    try:
-        response = requests.get(workbook_url, headers=headers, timeout=10)
-        print(f"📡 API 요청: {workbook_url} → 상태 코드: {response.status_code}")
-
-        if response.status_code != 200:
-            print(f"🚨 요청 실패: {response.status_code} - {response.text[:100]}")
-            return []  # 빈 리스트 반환하여 오류 방지
-        
-        txt = response.text
-    except requests.exceptions.RequestException as e:
-        print(f"🚨 요청 중 예외 발생: {e}")
-        return []
-    
-    # 문제 ID 파싱 과정
-    pattern = '/problem/'
-    ret = []
-    while True:
-        x = txt.find(pattern)
-        if x == -1:
-            break
-        txt = txt[x+9:]
-        prob_id, prob_name = '', ''
-        i = 0
-        while txt[i] in '0123456789':
-            prob_id += txt[i]
-            i += 1
-        if not prob_id:
-            continue
-        i += 2
-        while txt[i] != '<':
-            prob_name += txt[i]
-            i += 1
-        ret.append((prob_id, prob_name))
-    
-    return ret
-
-# def get_problem_info(workbook_url):
-  # headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36'}
+  headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36'}
   # txt = requests.get(workbook_url, headers=headers).text
-  # pattern = '/problem/'
-  # ret = []
-  # while True:
-  #   x = txt.find(pattern)
-  #   if x == -1: break
-  #   txt = txt[x+9:]
-  #   prob_id, prob_name = '', ''
-  #   i = 0
-  #   while txt[i] in '0123456789':
-  #     prob_id += txt[i]
-  #     i += 1
-  #   if not prob_id: continue
-  #   i += 2
-  #   while txt[i] != '<':
-  #     prob_name += txt[i]
-  #     i += 1
-  #   ret.append((prob_id, prob_name))
-  # return ret
+  try:
+      response = requests.get(workbook_url, headers=headers, timeout=10)
+      print(f"📡 API 요청: {workbook_url} → 상태 코드: {response.status_code}")
+
+      if response.status_code != 200:
+          print(f"🚨 요청 실패: {response.status_code} - {response.text[:100]}")
+          return []  # 빈 리스트 반환하여 오류 방지
+      
+      txt = response.text
+  except requests.exceptions.RequestException as e:
+      print(f"🚨 요청 중 예외 발생: {e}")
+      return []
+
+  pattern = '/problem/'
+  ret = []
+  while True:
+    x = txt.find(pattern)
+    if x == -1: break
+    txt = txt[x+9:]
+    prob_id, prob_name = '', ''
+    i = 0
+    while txt[i] in '0123456789':
+      prob_id += txt[i]
+      i += 1
+    if not prob_id: continue
+    i += 2
+    while txt[i] != '<':
+      prob_name += txt[i]
+      i += 1
+    ret.append((prob_id, prob_name))
+  return ret
 
 CATEGORY = ["연습 문제", "기본 문제✔", "기본 문제", "응용 문제✔", "응용 문제"]
 
@@ -113,9 +85,17 @@ int main(void){
       pbars.append("")
       continue
     solution_num = 0
+    print("attr[o] : " + attr[0])
     solution_path = f'../{attr[0]}/'
     category_idx = 0
+
     problem_infos = get_problem_info(attr[2])
+    if not problem_infos:
+        print(f"🚨 {attr[1]} ({attr[0]}) 문제집에 문제가 없음. 파일 생성 생략")
+        continue  # 문제 정보가 없으면 파일 생성 X
+    print(f"📄 {attr[1]} ({attr[0]}) 문제집 파일 생성 중...")
+
+
     prob_table = '| 문제 분류 | 문제 | 문제 제목 | 정답 코드 |\n| :--: | :--: | :--: | :--: |\n'
     for prob_id, prob_name in problem_infos:
       if prob_id in category[chapter_idx]:
@@ -133,12 +113,14 @@ int main(void){
       if codes[:100] == txt[:100]:
         prob_table += f'| {CATEGORY[category_idx]} | {prob_id} | [{prob_name}](https://www.acmicpc.net/problem/{prob_id}) | - |\n'
       else:
+        print("HERE")
         solution_num += 1
         code_attr = f'[정답 코드]({file_path.replace(" ", "%20")}.cpp)'
         MAX_DIFFERENT_SOLUTION = 9
         for i in range(1, MAX_DIFFERENT_SOLUTION+1):
           if os.path.exists(file_path+'_'+str(i)+'.cpp'):
             code_attr += f", [별해 {i}]({file_path+'_'+str(i)+'.cpp'})"
+            print(code_attr)
         prob_table += f'| {CATEGORY[category_idx]} | {prob_id} | [{prob_name}](https://www.acmicpc.net/problem/{prob_id}) | {code_attr} |\n'
     with open(attr[0]+'.md', 'w', encoding="UTF-8") as f:
       # progress bar
