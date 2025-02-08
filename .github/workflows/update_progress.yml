@@ -53,10 +53,10 @@ jobs:
       run: |
         cd Backkingdog/workbook
         python actions.py
-    - name: Check if there are any changes ✅ 변경점 있는지 체크
-      id: verify_diff
-      run: |
-        git diff --quiet . || echo "changed=true" >> $GITHUB_OUTPUT
+    # - name: Check if there are any changes ✅ 변경점 있는지 체크
+    #   id: verify_diff
+    #   run: |
+    #     git diff --quiet . || echo "changed=true" >> $GITHUB_OUTPUT
 
     - name: commits
       if: steps.verify_diff.outputs.changed == 'true' 

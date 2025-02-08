@@ -54,6 +54,11 @@
         "list": "cpp",
         "deque": "cpp",
         "stack": "cpp",
-        "queue": "cpp"
+        "queue": "cpp",
+        "forward_list": "cpp",
+        "regex": "cpp",
+        "set": "cpp",
+        "unordered_set": "cpp",
+        "valarray": "cpp"
     }
 }
