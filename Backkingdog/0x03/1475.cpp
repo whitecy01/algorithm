@@ -23,17 +23,11 @@ int main(void){
   int temp2 = 0;
   int temp = (arr[6] + arr[9] + 1) / 2;
   arr[6] = arr[9] = temp;
-  //   for (int i = 0; i < 10; i++)
-  // {
-  //   cout << arr[i] << " ";
-  // }
-  // cout << "\n";
+
   for (int i = 0; i < 10; i++)
   {
     temp2 = max(temp2, arr[i]);
   }
   cout << temp2 << "\n";
-  
-  
-  
+
 }
