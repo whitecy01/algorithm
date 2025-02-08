@@ -1,7 +1,5 @@
-// Authored by : whitecy
-// Co-authored by : -
-// http://boj.kr/****************
 #include <bits/stdc++.h>
+
 using namespace std;
 
 int main(void){
