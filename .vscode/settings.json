@@ -59,6 +59,9 @@
         "regex": "cpp",
         "set": "cpp",
         "unordered_set": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "stdio.h": "c",
+        "string.h": "c",
+        "libft.h": "c"
     }
 }
