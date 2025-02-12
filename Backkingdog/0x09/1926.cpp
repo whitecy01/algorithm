@@ -1,6 +1,5 @@
 // Authored by : whitecy
 // Co-authored by : -
-// http://boj.kr/****************
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -22,43 +21,45 @@ int main(void){
   cin.tie(0);
 
   cin >> n >> m;
-  for (int i = 0; i < n; i++) { for (int j = 0; j < m; j++) { cin >> arr[i][j]; }}
-  // for (int i = 0; i < n; i++) { for (int j = 0; j < m; j++) { cout << arr[i][j] << " "; } cout << "\n";}
-  // for (int i = 0; i < n; i++) { for (int j = 0; j < m; j++) { cout << view[i][j] << " "; } cout << "\n";}
   for (int i = 0; i < n; i++)
   {
     for (int j = 0; j < m; j++)
     {
-      if (arr[i][j] != 0 && view[i][j] == 0) //여기서부터 알고리즘 시작
-      {
-        queue<pair<int,int>> Q;
+      cin >> arr[i][j];
+    }
+  }
+  int all = 0;
+  int size = 0;
+  for (int i = 0; i < n; i++)
+  {
+    for (int j = 0; j < m; j++)
+    {
+      if (arr[i][j] == 1 && view[i][j] == false){
         int temp = 0;
-        view[i][j] = 1;
-        Q.push({i, j});
-        cnt++;
+        queue<pair<int,int>> Q;
+        view[i][j] = true;
+        Q.push({i,j});
+        size++;
+        // cout << " i : " << i << " j : " << j << "\n";
         while (!Q.empty())
         {
-          pair<int,int> cur = Q.front();
-          Q.pop();
+          auto cur = Q.front(); Q.pop();
           for (int k = 0; k < 4; k++)
           {
             int nx = cur.X + dx[k];
             int ny = cur.Y + dy[k];
-            if (nx < 0 || nx >= n || ny < 0 || ny >= m) continue;
-            if (view[nx][ny] || arr[nx][ny] != 1) continue;
-            view[nx][ny] = 1;
+            if (nx >= n || nx < 0 || ny >= m || ny < 0) continue;
+            if (view[nx][ny] != false || arr[nx][ny] != 1) continue;
+            view[nx][ny] = true;
             Q.push({nx,ny});
           }
           temp++;
         }
-
-        if (ans_size <= temp)
-          ans_size = temp;
+        all = max(all, temp);
       }
     }
   }
-
-  cout << cnt << "\n";
-  cout << ans_size << "\n";
+  cout << size << "\n";
+  cout << all << "\n";
   
 }
