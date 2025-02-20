@@ -12,9 +12,13 @@ int main(){
     cin >> n; for (int i = 0; i < n; i++){ cin >> s[i];}
 
     sort(s, s+n);
-    int sum = 0;
+    int ans = 0;
     int temp = 0;
-    for (int i = 0; i < n; i++){sum = sum + s[i]; temp += sum;}
-    cout << temp <<  "\n";
-    
+    for (int i = 0; i < n; i++)
+    {
+        temp = s[i] + temp;
+        ans += temp;
+    }
+    cout << ans << "\n";
+ 
 }

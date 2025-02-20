@@ -1,7 +1,8 @@
 // Authored by : whitecy
 // Co-authored by : -
-// http://boj.kr/****************
+
 #include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -16,23 +17,23 @@ int main(){
     cin >> T;
     for (int i = 0; i < T; i++)
     {
+        memset(lis, 0, sizeof(lis));
+        max_price = 0;
+
         cin >> n;
-        for (int j = 0; j < n; j++)
-        {
-            cin >> lis[j];
-        }
+        for (int j = 0; j < n; j++) { cin >> lis[j]; } 
+        max_price = lis[n - 1];
         long long ans = 0;
-        int max_price = lis[n - 1];
-        //값 계산
-        for (int k = n - 2; k >= 0; k--)
+        for (int idx = n - 2; idx >= 0; idx--)
         {
-            if (max_price > lis[k]){
-                int temp = max_price - lis[k];
+            if (max_price <= lis[idx]){
+                max_price = lis[idx];
+            }
+            else {
+                int temp = max_price - lis[idx];
                 ans += temp;
-            } 
-            else max_price = lis[k];
+            }
         }
-   
         cout << ans << "\n";
     }
     

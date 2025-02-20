@@ -15,14 +15,16 @@ int main(void){
   {
     cin >> arr[i];
   }
-  int ans = 0;
+  int count = 0;
   for (int i = n - 1; i >= 0; i--)
   {
-    ans += money / arr[i];
-    money %= arr[i];
+    count += money / arr[i];
+    money = money % arr[i];
   }
-  
-  cout << ans << "\n";
-  
-  
+  //풀이
+  // 4200 / 50000 -> 0
+  // 4200 % 50000 -> 4200
+  // 4200 / 1000 -> 4
+  // 4200 % 1000 -> 200 (남는 돈)
+  cout << count << "\n";
 }

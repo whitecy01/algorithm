@@ -11,12 +11,11 @@ int main(void){
     
     for (int i = 0; i < n; i++){cin >> w[i];}
     sort(w, w+n);
-    int max_height = 0;
+    int min_height = 0;
     for (int i = 1; i <= n; i++)
     {
-        max_height = max(max_height, w[n - i] * i);
+        min_height = max(min_height, w[n - i] * i);
     }
-    cout << max_height << "\n";
-    
+    cout << min_height << "\n";   
     
 }

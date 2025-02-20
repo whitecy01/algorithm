@@ -1,30 +1,42 @@
 // Authored by : whitecy
 // Co-authored by : -
-// http://boj.kr/****************
+
 #include <bits/stdc++.h>
 using namespace std;
 
-#define X first
-#define Y second
 
 int n;
-vector<pair<int,int>> event;
+vector<pair<int, int> > cls  ;
 
 int main(void) {
   ios::sync_with_stdio(0);
   cin.tie(0);
   cin >> n;
-  for(int i = 0; i < n; i++){
-    int s, t;
-    cin >> s >> t;
-    event.push_back({s, 1});
-    event.push_back({t, -1});
-  }
-  sort(event.begin(), event.end());
-  for (auto a: event)
+
+  for (int i = 0; i < n; i++)
   {
-    cout << "event : " << a.first << " " <<a.second << "\n"; 
-  }
+    int first,second;
+    cin >> second >> first;
   
+    cls.push_back({first, second}); 
+  }
+  sort(cls.begin(), cls.end());
+  // for (auto cur : cls)
+  // {
+  //   cout << "cur first : " << cur.first << " second : " << cur.second << "\n";
+  // }
+  int t = 0;
+  int count = 0;
+  int endt = 0;
+  for (int i = 0; i < n; i++)
+  {
+    if (endt <= cls[i].second){
+      // t = cls[i].second;
+      endt = cls[i].first;
+      count++;
+    }
+  }
+  cout << count << "\n";
+    
 
 }
