@@ -11,19 +11,30 @@ int main(void) {
 
   cin >> n;
   cin >> m;
-  int temp;
-  for (int i = 0; i < n; i++){cin >> temp; a[i] = temp;}
-  for (int i = 0; i < m; i++){cin >> temp; b[i] = temp;}
-  int aidx = 0; int bidx = 0;
-  for (int i = 0; i < n+m; i++)
+  for (int i = 0; i < n; i++)
   {
-    if (aidx == n) c[i] = b[bidx++];
-    else if (bidx == m) c[i] = a[aidx++];
-    else if (a[aidx] <= b[bidx]) c[i] = a[aidx++];
-    else c[i] = b[bidx++];
+    cin >> a[i];
+  }
+  for (int i = 0; i < m; i++)
+  {
+    cin >> b[i];
   }
 
-  for (int i = 0; i < n+m; i++){cout << c[i] << " ";}
+  int n_idx = 0;
+  int m_idx = 0;
+
+  for (int i = 0; i < n + m; i++)
+  {
+    if (n_idx == n) c[i] = b[m_idx++];
+    else if (m_idx == m) c[i] = a[n_idx++];
+    else if (a[n_idx] >= b[m_idx]) c[i] = b[m_idx++];
+    else c[i] =  a[n_idx++];
+  }
+  
+  for (int i = 0; i < n + m; i++)
+  {
+    cout << c[i] << " ";
+  }
   
 }
 
